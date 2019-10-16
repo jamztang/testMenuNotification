@@ -49,6 +49,8 @@
 		1AB8F1A42356E5BB00DED60C /* testMenuNotificationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testMenuNotificationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AB8F1A82356E5BB00DED60C /* testMenuNotificationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testMenuNotificationUITests.swift; sourceTree = "<group>"; };
 		1AB8F1AA2356E5BB00DED60C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AB8F1B62356E7B800DED60C /* testMenuNotification.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = testMenuNotification.entitlements; sourceTree = "<group>"; };
+		1AB8F1B72356EBB800DED60C /* testMenuNotification-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "testMenuNotification-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		1AB8F1852356E5B900DED60C /* testMenuNotification */ = {
 			isa = PBXGroup;
 			children = (
+				1AB8F1B62356E7B800DED60C /* testMenuNotification.entitlements */,
 				1AB8F1862356E5B900DED60C /* AppDelegate.swift */,
 				1AB8F1882356E5BA00DED60C /* SceneDelegate.swift */,
 				1AB8F18A2356E5BA00DED60C /* ViewController.swift */,
@@ -106,6 +109,7 @@
 				1AB8F18F2356E5BB00DED60C /* Assets.xcassets */,
 				1AB8F1912356E5BB00DED60C /* LaunchScreen.storyboard */,
 				1AB8F1942356E5BB00DED60C /* Info.plist */,
+				1AB8F1B72356EBB800DED60C /* testMenuNotification-Bridging-Header.h */,
 			);
 			path = testMenuNotification;
 			sourceTree = "<group>";
@@ -196,6 +200,7 @@
 				TargetAttributes = {
 					1AB8F1822356E5B900DED60C = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 					};
 					1AB8F1982356E5BB00DED60C = {
 						CreatedOnToolsVersion = 11.1;
@@ -434,7 +439,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = testMenuNotification/testMenuNotification.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				DEVELOPMENT_TEAM = H5BVQ8XRL4;
 				INFOPLIST_FILE = testMenuNotification/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -442,6 +451,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.goodnotes.testMenuNotification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "testMenuNotification/testMenuNotification-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -451,7 +463,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = testMenuNotification/testMenuNotification.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				DEVELOPMENT_TEAM = H5BVQ8XRL4;
 				INFOPLIST_FILE = testMenuNotification/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -459,6 +475,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.goodnotes.testMenuNotification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "testMenuNotification/testMenuNotification-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
